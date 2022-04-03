@@ -13,6 +13,7 @@ Dieses Porjekt wurde für das Modul 242 in der TBZ erstellt. Wetterdaten werden 
 -  ``web`` Ordner in das Verzeichnis ``/war/www/html`` ziehen
 - Mariadb installieren (unten beschrieben)
 - Auf RaspberryPI apache2 installieren ``sudo apt install apache2``
+- Bsp. [VSCode](https://code.visualstudio.com/download) & Live Server (unter Marktplace) auf VSCode installieren
 
 ## Mariadb
 ### Installation
@@ -34,10 +35,27 @@ GRANT PROXY ON ''@'%' TO 'root'@'localhost' WITH GRANT OPTION;
 
 ## Konfiguration
 RaspberryPi und IoTKit müssen im gleichen Netz sein. 
-IP-Adresse des RaspberryPi's im File ändern ([main.ccp](https://github.com/user/repo/blob/branch/other_file.md)).
+IP-Adresse des RaspberryPi's im File ändern ([main.ccp](https://github.com/EAlbanese/smartMirror/blob/main/http/main.cpp)).
 <pre><code>/** ThingSpeak URL und API Key ggf. anpassen */
 char host[] = "http://192.168.104.10:5000/weather";
 char key[] = "A2ABBMDJYRAMA6JM";
 </pre></code>
 
-IotKit WLAN Verbindung
+IotKit WLAN Verbindung <br/>
+Entweder Hotspot-Namen und Passwort anpassen oder Benutzernamen sowie Passwort im [mbed_app.json](https://github.com/EAlbanese/smartMirror/blob/main/http/mbed_app.json) File änderen.
+<pre><code>
+"config": {
+    "wifi-ssid": {
+        "help": "WiFi SSID",
+        "value": "\"LERNKUBE\""
+    },
+    "wifi-password": {
+        "help": "WiFi Password",
+        "value": "\"l3rnk4b3\""
+    }
+</pre></code>
+
+## Run
+- mbed-``http`` & ``request.py`` (auf raspberrypi) starten
+- ``frontend`` (web-ordner) auf VSCode öffnen & auf [GoLive](https://morioh.com/p/d50494a9ffaa) klicken
+
