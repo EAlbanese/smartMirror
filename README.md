@@ -1,5 +1,6 @@
 # Smart Mirror
 Dieses Porjekt wurde für das Modul 242 in der TBZ erstellt. Wetterdaten werden von dem IotKit genommen und auf einer Webseite dargestellt.
+- [Reflexion](https://github.com/EAlbanese/smartMirror/wiki/Reflexion)
 
 ## Resourcen
 - IotKit
