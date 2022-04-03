@@ -23,7 +23,7 @@ Dieses Porjekt wurde für das Modul 242 in der TBZ erstellt. Wetterdaten werden 
 <pre><code>sudo mysql -u root -p
 DROP Database if exists smartMirror;
 Create Database smartMirror;
-use smartMirror;
+USE smartMirror;
 CREATE TABLE weather (id int not null AUTO_INCREMENT, temp double not null, hum double not null, date datetime not null CURRENT_TIME(), PRIMARY KEY (id));
 </pre></code>
 #### User erstellen
