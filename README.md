@@ -29,9 +29,9 @@ USE smartMirror;
 CREATE TABLE weather (id int not null AUTO_INCREMENT, temp double not null, hum double not null, date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (id));
 </pre></code>
 #### User erstellen
-<pre><code>CREATE USER 'root@localhost' IDENTIFIED BY 'root';
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED VIA unix_socket WITH GRANT OPTION;
-GRANT PROXY ON ''@'%' TO 'root'@'localhost' WITH GRANT OPTION;
+<pre><code>CREATE USER 'weather'@'localhost' IDENTIFIED BY 'root';
+GRANT ALL PRIVILEGES ON smartMirror.* TO 'weather'@'localhost';
+FLUSH PRIVILEGES;
 </pre></code>
 
 ## Konfiguration
