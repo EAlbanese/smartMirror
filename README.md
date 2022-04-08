@@ -24,7 +24,7 @@ Dieses Porjekt wurde für das Modul 242 in der TBZ erstellt. Wetterdaten werden 
 DROP Database if exists smartMirror;
 Create Database smartMirror;
 USE smartMirror;
-CREATE TABLE weather (id int not null AUTO_INCREMENT, temp double not null, hum double not null, date datetime not null CURRENT_TIME(), PRIMARY KEY (id));
+CREATE TABLE weather (id int not null AUTO_INCREMENT, temp double not null, hum double not null, date TIMESTAMP not null CURRENT_TIMESTAMP, PRIMARY KEY (id));
 </pre></code>
 #### User erstellen
 <pre><code>CREATE USER root@localhost IDENTIFIED BY 'root';
