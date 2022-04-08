@@ -14,6 +14,7 @@ Dieses Porjekt wurde für das Modul 242 in der TBZ erstellt. Wetterdaten werden 
 -  ``web`` Ordner in das Verzeichnis ``/var/www/html`` ziehen
 - Mariadb installieren (unten beschrieben)
 - Installieren flask auf Raspberry PI ``sudo apt-get install python3-flask``
+- Python 3 installieren ``sudo apt install python3-pip -y``
 - Auf RaspberryPI apache2 installieren ``sudo apt install apache2``
 - Bsp. [VSCode](https://code.visualstudio.com/download) & [Live Server](https://morioh.com/p/d50494a9ffaa) (unter Marktplace) auf VSCode installieren (auf RaspberryPI)
 
