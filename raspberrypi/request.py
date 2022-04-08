@@ -21,7 +21,7 @@ class create_dict(dict):
     def add(self, key, value): 
         self[key] = value
 
-@app.route('/', methods = ["POST"])
+@app.route('/weather', methods = ["POST"])
 def post():
     data = request.get_json()
     cur = conn.cursor()  
@@ -33,7 +33,7 @@ def post():
 
     return str(cur.lastrowid)
 
-@app.route('/', methods = ["GET"])
+@app.route('/weather', methods = ["GET"])
 def get():
     cur = conn.cursor()  
     cur.execute("SELECT hum, temp, DATE_FORMAT(date, '%Y-%m-%d %h:%m:%s') FROM weather")
@@ -42,6 +42,7 @@ def get():
     for row in rv:
         response.append({"temp":row[0],"hum":row[1],"date":row[2]})
     return app.response_class(
+        headers = { 'Access-Control-Allow-Origin' : '*' }
         response = json.dumps(response),
         status = 200,
         mimetype='application/json'
