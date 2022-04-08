@@ -11,7 +11,7 @@ Dieses Porjekt wurde für das Modul 242 in der TBZ erstellt. Wetterdaten werden 
 - Projek Clonen
 - ``http`` Ordner in mbed öffnen
 - ``raspberrypi`` Ordner auf Rasperrypi speichern
--  ``web`` Ordner in das Verzeichnis ``/war/www/html`` ziehen
+-  ``web`` Ordner in das Verzeichnis ``/var/www/html`` ziehen
 - Mariadb installieren (unten beschrieben)
 - Auf RaspberryPI apache2 installieren ``sudo apt install apache2``
 - Bsp. [VSCode](https://code.visualstudio.com/download) & [Live Server](https://morioh.com/p/d50494a9ffaa) (unter Marktplace) auf VSCode installieren (auf RaspberryPI)
