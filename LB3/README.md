@@ -51,7 +51,7 @@ char key[] = "A2ABBMDJYRAMA6JM";
 </pre></code>
 
 ## Node-Red
-![node-red](./MicrosoftTeams-image (1).png)
+![node-red](./nodeRed.png)
 
 - [File](./flows.json) clonen
 - Im Node-Red importieren
