@@ -20,6 +20,7 @@ DROP Database if exists smartMirror;
 Create Database smartMirror;
 USE smartMirror;
 CREATE TABLE weather (id int not null AUTO_INCREMENT, temp double not null, hum double not null, date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (id));
+CREATE TABLE user (id int not null AUTO_INCREMENT, username string not null, todo_name string not null, date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (id));
 </pre></code>
 #### User erstellen
 <pre><code>CREATE USER 'weather'@'localhost' IDENTIFIED BY 'root';
@@ -48,6 +49,9 @@ IP-Adresse des RaspberryPi's im File ändern ([main.ccp](https://github.com/EAlb
 char host[] = "http://192.168.104.10:5000/weather";
 char key[] = "A2ABBMDJYRAMA6JM";
 </pre></code>
+
+## Node-Red
+
 
 ## Run
 - mbed-``http`` debuggin & run & ``request.py`` (auf IotKit und raspberrypi) starten
