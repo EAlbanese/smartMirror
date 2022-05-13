@@ -1,0 +1,100 @@
+[
+    {
+        "id": "ea5c58bd669c73e6",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d937cca0fd2ddab8",
+        "type": "mqtt in",
+        "z": "ea5c58bd669c73e6",
+        "name": "",
+        "topic": "smartMirror/sensor",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "63bd73c18f05564c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 300,
+        "wires": [
+            [
+                "2355a8cfc69a64f5"
+            ]
+        ]
+    },
+    {
+        "id": "c45d9f6ba4689508",
+        "type": "http request",
+        "z": "ea5c58bd669c73e6",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5000/weather",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 550,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2355a8cfc69a64f5",
+        "type": "csv",
+        "z": "ea5c58bd669c73e6",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "temp,hum",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 390,
+        "y": 300,
+        "wires": [
+            [
+                "c45d9f6ba4689508"
+            ]
+        ]
+    },
+    {
+        "id": "63bd73c18f05564c",
+        "type": "mqtt-broker",
+        "name": "TBZ Cloud",
+        "broker": "cloud.tbz.ch",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    }
+]
