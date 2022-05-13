@@ -53,6 +53,14 @@ char key[] = "A2ABBMDJYRAMA6JM";
 ## Node-Red
 ![node-red](./IMG_0287.JPG)
 
+### Node-RED
+- mqtt Input Node auf Flow 1 platzieren, mit Mosquitto Server verbinden, als Topic iotkit/# und bei Output a String eintragen.
+- debug Output Node auf Flow 1 platzieren und mit Input Node verbinden.
+- Programm mittels Deploy veröffentlichen.
+### mbed Teil
+- MQTTPublish Beispiel in mbed Compiler importieren und ca. auf Zeile 21 den hostname mit der IP-Adresse auswechseln wo der Mosquitto Server läuft.
+- Programm Compilieren und auf Board laden.
+
 ## Run
 - mbed-``http`` debuggin & run & ``request.py`` (auf IotKit und raspberrypi) starten
 - ``frontend`` (web-ordner) auf VSCode öffnen & auf [GoLive](https://morioh.com/p/d50494a9ffaa) klicken
